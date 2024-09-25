@@ -79,28 +79,33 @@ p {
 }
 
 .footer {
+    width: 90%;
+    max-width: 1530px;
+    height: 50px;
+    margin-inline: auto;
+    position: relative;
     display: flex;
-    gap: 0.5em;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    padding: 0.3rem;
 }
 
-.footer div {
+.item {
+    font-size: 1.2rem;
     color: var(--clr-header);
     opacity: 85%;
 }
 
-.footer div a {
+.item a {
     text-decoration: none;
     color: var(--clr-rose);
 }
 
-.footer div a:hover {
+.item a:hover {
     color:#6d28d9;
 }
 
-.footer div a:visited {
+.item a:visited {
     color:#4d7c0f;
 }
 
@@ -146,6 +151,11 @@ p {
         margin-bottom: 2rem;
     }
 
+    .recipe img {
+        width: 18.75rem;
+        border: 0.375rem solid var(--clr-border);
+    }
+
     h3 {
         font-size: 1.8rem;
         text-align: left;
@@ -156,51 +166,51 @@ p {
         text-align: justify;
     }
 
-    .recipe img {
-        width: 18.75rem;
-        border: 0.375rem solid var(--clr-border);
-    }
-
     .footer {
-        border: 1px solid red;
         width: 90%;
         max-width: 1536px;
         margin-inline: auto;
         position: relative;
         height: 40px;
+        overflow: hidden;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* @keyframes scrollLeft {
+     @keyframes scrollLeft {
         to {
-            left: -100%; 
+            left: -111px; 
         }
-    } */
+    } 
 
     .item {
-        border: 1px solid yellow;
-        /* position: absolute; */
-        /* left: max(555px, 100%);  */
+        position: absolute;
+        left: 100%;
         animation-name: scrollLeft;
-        animation-duration: 20s;
+        animation-duration: 3.8s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
 
-     /* .item1 {
-        animation-delay: calc(20s / 5 * (5-1) * -1);
+    .item1 {
+        animation-delay: -5s;
     }
-     .item2 {
-        animation-delay: animation-delay: calc(20s / 5 * (5-1) * -1);
-    }  */
-    /*.item3 {
-        animation-delay: -9s;
+    .item2 {
+        animation-delay: -4.5s;
+    }  
+    .item3 {
+        animation-delay: -4s;
     }
     .item4 {
-        animation-delay: -12s;
+        animation-delay: -3.7s;
     }
     .item5 {
-        animation-delay: -15s;
-    } */
+        animation-delay: -3.2s;
+    }
+    .item6 {
+        animation-delay: -2.8s;
+    }
 
 }
 
@@ -225,32 +235,45 @@ p {
         transform: rotateY(-23deg);
     }
 
-    h3 {
-        font-size: 2rem;
-        text-align: center;
-        top: 100%;
-    }
-    p {
-        font-size: 1.5rem;
-        top: 120%;
-    }
-
     main .container:first-child {
         display: flex;
         gap: 2rem;
         justify-content: space-around;
         margin-bottom: 10rem;
     }
-
+    
     .recipe {
         display: flex;
         flex-direction: column;
-        gap:unset;
-        align-items:start;
-        justify-content: center;
-        position: relative;
+        gap:3rem;
+        align-items:center;
+        justify-content: space-around;
+        margin-bottom: 3rem;
         transition: transform 0.3s ease-in-out;
         transition: filter 0.25s ease-in-out;
+    }  
+
+    .recipe h3,
+    .recipe p {
+        z-index: 3;
+        max-width: 30ch;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+    }
+
+    h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+
+    .recipe:hover h3,
+    .recipe:hover p  {
+        visibility: visible;
+        opacity: 1;
     }
 
     .recipe img {
@@ -260,26 +283,38 @@ p {
 
     .recipe:hover {
         transform: scale(1.05); /* Increases the size of the image container by 5% */
-    }
+    } 
 
-    .recipe h3,
-    .recipe p {
-        position: absolute;
-        z-index: 10;
-        max-width: 50ch;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.5s ease-in-out;
-    }
-  
-    .recipe:hover h3,
-    .recipe:hover p  {
-        visibility: visible;
-        opacity: 1;
+    .recipe:active {
+        transform: scale(0.96);
     }
 
     .container:hover .recipe:not(:hover) {
         filter: grayscale(1) blur(5px);
+    }
+
+    .item {
+        font-size: 1.5rem;
+        animation-duration: 4.5s;
+    }
+
+    .item1 {
+        animation-delay: -6s;
+    }
+    .item2 {
+        animation-delay: -5.5s;
+    }  
+    .item3 {
+        animation-delay: -5s;
+    }
+    .item4 {
+        animation-delay: -4.6s;
+    }
+    .item5 {
+        animation-delay: -4.2s;
+    }
+    .item6 {
+        animation-delay: -3.7s;
     }
 }
 
@@ -303,6 +338,30 @@ p {
         width: 23rem;
         height: 23rem;
         border: 0.5rem solid var(--clr-border);
+    }
+
+    .item {
+        font-size: 1.8rem;
+        animation-duration: 5s;
+    }
+
+    .item1 {
+        animation-delay: -6s;
+    }
+    .item2 {
+        animation-delay: -5.5s;
+    }  
+    .item3 {
+        animation-delay: -5s;
+    }
+    .item4 {
+        animation-delay: -4.6s;
+    }
+    .item5 {
+        animation-delay: -4.2s;
+    }
+    .item6 {
+        animation-delay: -3.7s;
     }
 }
 
