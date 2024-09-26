@@ -27,8 +27,9 @@ body {
 
 header h1 {
     font-size: 2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     color: var(--clr-header);
-    letter-spacing: 0.3125rem;
+    letter-spacing: -0.05rem;
     text-align: center;
     text-shadow: 0 0 10px var(--clr-shadow);
     margin-bottom:2rem;
@@ -36,7 +37,7 @@ header h1 {
 
 header h1::before {
     position: absolute;
-    left: 68%;
+    left: 65%;
     bottom: 95%;
     width: 25px;
     height:25px;
@@ -65,6 +66,7 @@ header h1::before {
 h3 {
     text-align: center;
     font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--clr-header);
     text-shadow: 0 0 5px var(--clr-shadow);
     letter-spacing: 0.15625rem;
@@ -73,6 +75,7 @@ h3 {
 p {
     text-align: center;
     font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 3rem;
     color: var(--clr-text);
     margin-inline: auto;
@@ -92,6 +95,7 @@ p {
 
 .item {
     font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--clr-header);
     opacity: 85%;
 }
@@ -136,7 +140,7 @@ p {
     }
 
     header h1::before {
-        left: 63%;
+        left: 60.5%;
         bottom: 93.5%;
         width: 35px;
         height:35px;
@@ -173,43 +177,44 @@ p {
         position: relative;
         height: 40px;
         overflow: hidden;
-        gap: 1rem;
+        gap: 0.5rem;
         align-items: center;
         justify-content: center;
     }
 
      @keyframes scrollLeft {
         to {
-            left: -111px; 
+            left: -100px; 
         }
     } 
 
     .item {
         position: absolute;
+        width: 100px;
         left: 100%;
         animation-name: scrollLeft;
-        animation-duration: 3.8s;
+        animation-duration: 10s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
 
     .item1 {
-        animation-delay: -5s;
+        animation-delay: calc(10s / 6 * (6 - 1) * -1);
     }
     .item2 {
-        animation-delay: -4.5s;
+        animation-delay: calc(10s / 6 * (6 - 2) * -1);
     }  
     .item3 {
-        animation-delay: -4s;
+        animation-delay: calc(10s / 6 * (6 - 3) * -1);
     }
     .item4 {
-        animation-delay: -3.7s;
+        animation-delay: calc(10s / 6 * (6 - 4) * -1);
     }
     .item5 {
-        animation-delay: -3.2s;
+        animation-delay: calc(10s / 6 * (6 - 5) * -1);
     }
     .item6 {
-        animation-delay: -2.8s;
+        animation-delay: calc(10s / 6 * (6 - 6) * -1);
     }
 
 }
@@ -228,7 +233,7 @@ p {
     }
 
     header h1::before {
-        left: 63%;
+        left: 60%;
         bottom: 91.5%;
         width: 45px;
         height:45px;
@@ -293,28 +298,40 @@ p {
         filter: grayscale(1) blur(5px);
     }
 
+    .footer {
+        height: 3rem;
+    }
+
+     @keyframes scrollLeft {
+        to {
+            left: -125px; 
+        }
+    }
+
     .item {
+        width: 125px;
+        animation-duration: 20s;
         font-size: 1.5rem;
-        animation-duration: 4.5s;
+        text-align: center;
     }
 
     .item1 {
-        animation-delay: -6s;
+        animation-delay: calc(20s / 6 * (6 - 1) * -1);
     }
     .item2 {
-        animation-delay: -5.5s;
+        animation-delay: calc(20s / 6 * (6 - 2) * -1);
     }  
     .item3 {
-        animation-delay: -5s;
+        animation-delay: calc(20s / 6 * (6 - 3) * -1);
     }
     .item4 {
-        animation-delay: -4.6s;
+        animation-delay: calc(20s / 6 * (6 - 4) * -1);
     }
     .item5 {
-        animation-delay: -4.2s;
+        animation-delay: calc(20s / 6 * (6 - 5) * -1);
     }
     .item6 {
-        animation-delay: -3.7s;
+        animation-delay: calc(20s / 6 * (6 - 6) * -1);
     }
 }
 
@@ -327,7 +344,7 @@ p {
     }
 
     header h1::before {
-        left: 63%;
+        left: 61%;
         bottom: 89%;
         width: 60px;
         height:60px;
@@ -340,35 +357,26 @@ p {
         border: 0.5rem solid var(--clr-border);
     }
 
-    .item {
-        font-size: 1.8rem;
-        animation-duration: 5s;
+    .footer {
+        height: 4rem;
     }
 
-    .item1 {
-        animation-delay: -6s;
+     @keyframes scrollLeft {
+        to {
+            left: -150px; 
+        }
     }
-    .item2 {
-        animation-delay: -5.5s;
-    }  
-    .item3 {
-        animation-delay: -5s;
-    }
-    .item4 {
-        animation-delay: -4.6s;
-    }
-    .item5 {
-        animation-delay: -4.2s;
-    }
-    .item6 {
-        animation-delay: -3.7s;
+
+    .item {
+        width: 150px;
+        font-size: 2rem;
     }
 }
 
 /* 2xL */
 @media (min-width: 1536px) {
     header h1::before {
-        left: 59.5%;
+        left: 59%;
         bottom: 89%;
         width: 60px;
         height:60px;
