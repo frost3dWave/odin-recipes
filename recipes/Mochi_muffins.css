@@ -39,7 +39,6 @@ body {
 
 .hero__title{
     font-size: 2.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     color: var(--clr-header);
     text-transform: capitalize;
     position: relative;
@@ -66,7 +65,6 @@ body {
 .container_description {
     color: var(--clr-text);
     font-size: 1.5rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -162,7 +160,6 @@ body {
     text-align: center;
     line-height: 1.5;
     font-size: 1.8rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0 0 5px var(--clr-shadow);
     margin-block: 1.5rem;
     color: black;
@@ -173,7 +170,6 @@ body {
 .nutrition__table {
     margin-top: 1.5rem;
     font-size: 1.3rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--clr-text);
     line-height: 1.5;
 }
@@ -207,8 +203,8 @@ body {
     }
 
     .hero__title{
-        font-size: 4rem;
-        top:18rem;
+        font-size: 3rem;
+        top:19rem;
         left: 2rem;
     }
 
@@ -306,8 +302,8 @@ body {
     }
 
     .hero__title{
-        font-size: 5rem;
-        top:20rem;
+        font-size: 4rem;
+        top:21rem;
     }
 
     .hero__image {
@@ -352,8 +348,8 @@ body {
     }
 
     .hero__title{
-        font-size: 6rem;
-        top:22rem;
+        font-size: 4.5rem;
+        top:23rem;
         left: 1.5rem;
     }
 
@@ -424,6 +420,10 @@ body {
 
 /* 2xL */
 @media (min-width: 1536px) {
+
+    .hero {
+        overflow: hidden;
+    }
 
     .hero__title{
         top:26rem;
