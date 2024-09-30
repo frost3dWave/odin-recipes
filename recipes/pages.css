@@ -421,8 +421,16 @@ body {
 /* 2xL */
 @media (min-width: 1536px) {
 
+    .hero__title{
+        top:26rem;
+    }
+
     .hero__image {
         height: 55vh;
+    }
+
+    .container_description {
+        font-size: 2.5rem;
     }
 
 }
